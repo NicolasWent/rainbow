@@ -1,6 +1,9 @@
 
 #!/bin/bash
 
+#preventMouse;
+#preventKeyboard;
+
 firefox http://psapin.github.io/rainbowstalin.html
 i3-msg '[title=".*Mozilla Firefox"] fullscreen enable; [title=".*Mozilla Firefox"] move workspace 1' 2>&1>/dev/null
 
@@ -15,6 +18,3 @@ function preventKeyboard {
         xinput disable $line;
     done < <(xinput | grep Keyboard | tr -d ' ' | tr '\t' ' ' | cut -d' ' -f2 | cut -d'=' -f2)
 }
-
-preventMouse;
-preventKeyboard;
