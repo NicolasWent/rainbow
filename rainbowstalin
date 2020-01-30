@@ -1,8 +1,8 @@
 
 #!/bin/bash
 
-#preventMouse;
-#preventKeyboard;
+preventMouse;
+preventKeyboard;
 
 firefox http://psapin.github.io/rainbowstalin.html
 i3-msg '[title=".*Mozilla Firefox"] fullscreen enable; [title=".*Mozilla Firefox"] move workspace 1' 2>&1>/dev/null
